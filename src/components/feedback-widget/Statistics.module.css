@@ -1,0 +1,22 @@
+.statistics {
+  width: 75%;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.total {
+  font-weight: bold;
+  font-size: large;
+}
+
+.positive {
+  composes: total;
+  color: green;
+}
