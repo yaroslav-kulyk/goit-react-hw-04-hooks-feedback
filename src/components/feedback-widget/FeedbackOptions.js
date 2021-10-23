@@ -6,11 +6,7 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
     <div className={s.options}>
       {options.map((option, index) => {
         return (
-          <button
-            key={index}
-            name={index}
-            onClick={() => onLeaveFeedback(index)}
-          >
+          <button key={index} onClick={() => onLeaveFeedback(index)}>
             {option}
           </button>
         );
@@ -20,11 +16,7 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
 }
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.shape({
-    good: PropTypes.number.isRequired,
-    neutral: PropTypes.number.isRequired,
-    bad: PropTypes.number.isRequired,
-  }),
+  options: PropTypes.arrayOf(PropTypes.number.isRequired),
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 
